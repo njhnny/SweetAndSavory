@@ -22,7 +22,6 @@ else
   <h3>No flavors have been added yet!</h3>
 }
 <br>
-@*Wrapped the 'Add New Recipe' ActionLink in an if statement to only show the link if the user is authenticated*@
 @if (User.Identity.IsAuthenticated)
 {
   <p>@Html.ActionLink("Add new flavor", "Create")</p>
