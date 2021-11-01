@@ -29,7 +29,7 @@ An application for a bakery. Users can create an account, log in, create treats 
 * Run the command dotnet ef database update to create the database from the Migrations folder
 * In the terminal, run the commands dotnet build, then dotnet run
 ## Known Bugs
-no known bugs
+Upo creation of a relationship between a Treat and a Flavor, user must manually return to the Treat details page.
 ## License
 MIT LICENSE
 Copyright (c) 2021 Nick Hennessy
