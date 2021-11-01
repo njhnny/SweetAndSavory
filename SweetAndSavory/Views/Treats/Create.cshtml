@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SweetAndSavory.Models.Treat
+
+<h4>Add a new treat</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.TreatName)
+  @Html.TextBoxFor(model => model.TreatName)
+  <br>
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+  @* <br>
+  @Html.Label("Select flavor")
+  @Html.DropDownList("FlavorId")
+  <br> *@
+
+
+
+
+  <input type="submit" value="Add new treat" class="btn btn-default"/>
+}
+<p>@Html.ActionLink("Show all treats", "Index")</p>
