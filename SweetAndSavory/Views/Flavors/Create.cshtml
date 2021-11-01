@@ -4,12 +4,13 @@
 
 @model SweetAndSavory.Models.Flavor
 
+
 <h4>Add a new flavor</h4>
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.FlavorName)
-  @Html.TextBoxFor(model => model.FlavorName)
+  <span>Flavor Name: @Html.TextBoxFor(model => model.FlavorName)</span>
+  
   <br>
   @* <br>
   @Html.Label("Select flavor")

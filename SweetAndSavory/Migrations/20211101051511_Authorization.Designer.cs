@@ -9,8 +9,8 @@ using SweetAndSavory.Models;
 namespace SweetAndSavory.Migrations
 {
     [DbContext(typeof(SweetAndSavoryContext))]
-    [Migration("20211101025757_Initial")]
-    partial class Initial
+    [Migration("20211101051511_Authorization")]
+    partial class Authorization
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

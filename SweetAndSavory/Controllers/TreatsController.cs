@@ -15,6 +15,7 @@ namespace SweetAndSavory.Controllers
   public class TreatsController : Controller
   {
     private readonly SweetAndSavoryContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
     public TreatsController(SweetAndSavoryContext db)
     {
@@ -34,7 +35,7 @@ namespace SweetAndSavory.Controllers
       return View();
     }
 
-    [HttpPost]
+[HttpPost]
     public ActionResult Create(Treat treat)
     {
       _db.Treats.Add(treat);
