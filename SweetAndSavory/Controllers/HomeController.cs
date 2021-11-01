@@ -21,5 +21,10 @@ namespace SweetAndSavory.Controllers
       model.Treats = _db.Treats.ToList();
       return View(model);
     }
+    // [HttpGet("/")]
+    //   public ActionResult Index()
+    //   {
+    //     return View();
+    //   }
   }
 }

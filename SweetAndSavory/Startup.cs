@@ -45,8 +45,10 @@ namespace SweetAndSavory
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
-      app.UseAuthentication();
+      app.UseAuthentication(); 
+
       app.UseRouting();
+
       app.UseAuthorization();
 
       app.UseEndpoints(routes =>
