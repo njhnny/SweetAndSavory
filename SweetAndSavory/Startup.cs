@@ -14,8 +14,8 @@ namespace SweetAndSavory
     public Startup(IWebHostEnvironment env)
     {
       var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json");
+          .SetBasePath(env.ContentRootPath)
+              .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
@@ -28,11 +28,9 @@ namespace SweetAndSavory
       services.AddEntityFrameworkMySql()
         .AddDbContext<SweetAndSavoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
-        
       services.AddIdentity<ApplicationUser, IdentityRole>()
         .AddEntityFrameworkStores<SweetAndSavoryContext>()
         .AddDefaultTokenProviders();
-
       services.Configure<IdentityOptions>(options =>
       {
         options.Password.RequireDigit = false;
@@ -47,11 +45,8 @@ namespace SweetAndSavory
     public void Configure(IApplicationBuilder app)
     {
       app.UseDeveloperExceptionPage();
-
-      app.UseAuthentication(); 
-
+      app.UseAuthentication();
       app.UseRouting();
-
       app.UseAuthorization();
 
       app.UseEndpoints(routes =>
@@ -60,7 +55,7 @@ namespace SweetAndSavory
       });
 
       app.UseStaticFiles();
-      
+
       app.Run(async (context) =>
       {
         await context.Response.WriteAsync("Hello World!");
