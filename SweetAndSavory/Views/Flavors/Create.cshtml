@@ -6,11 +6,11 @@
 
 
 <h4>Add a new flavor</h4>
-
+<br>
 @using (Html.BeginForm())
 {
   <span>Flavor Name: @Html.TextBoxFor(model => model.FlavorName, new { required = "required" })</span>
-  
+  <br>
   <br>
   @* <br>
   @Html.Label("Select flavor")
@@ -22,4 +22,5 @@
 
   <input type="submit" value="Add new flavor" class="btn btn-default"/>
 }
+<br>
 <p>@Html.ActionLink("Show all flavors", "Index")</p>
