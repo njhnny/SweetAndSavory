@@ -9,7 +9,7 @@
 
 @using (Html.BeginForm())
 {
-  <span>Flavor Name: @Html.TextBoxFor(model => model.FlavorName)</span>
+  <span>Flavor Name: @Html.TextBoxFor(model => model.FlavorName, new { required = "required" })</span>
   
   <br>
   @* <br>
